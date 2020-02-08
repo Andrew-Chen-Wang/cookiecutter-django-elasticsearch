@@ -63,11 +63,15 @@ Optional Integrations
 
 *These features can be enabled during initial project setup.*
 
+* Configuration for `Elasticsearch`_ with `Elastic Cloud`_ or `AWS Elasticsearch`_
 * Serve static files from Amazon S3, Google Cloud Storage or Whitenoise_
 * Configuration for Celery_ and Flower_ (the latter in Docker setup only)
 * Integration with MailHog_ for local email testing
 * Integration with Sentry_ for error logging
 
+.. _Elasticsearch: https://www.elastic.co/elasticsearch
+.. _Elastic Cloud: https://www.elastic.co/cloud/
+.. _AWS Elasticsearch: https://aws.amazon.com/elasticsearch-service/
 .. _Bootstrap: https://github.com/twbs/bootstrap
 .. _django-environ: https://github.com/joke2k/django-environ
 .. _12-Factor: http://12factor.net/
@@ -85,7 +89,7 @@ Optional Integrations
 .. _PythonAnywhere: https://www.pythonanywhere.com/
 .. _Traefik: https://traefik.io/
 .. _LetsEncrypt: https://letsencrypt.org/
-.. _pre-commit: https://github.com/pre-commit/pre-commit 
+.. _pre-commit: https://github.com/pre-commit/pre-commit
 
 Constraints
 -----------
@@ -185,6 +189,11 @@ Answer the prompts with your own desired options_. For example::
     1 - AWS
     2 - GCP
     3 - None
+    Choose from 1, 2, 3 [1]: 1
+    Elasticsearch Provider:
+    1 - None
+    2 - Elastic Cloud
+    3 - AWS Elasticsearch
     Choose from 1, 2, 3 [1]: 1
     custom_bootstrap_compilation [n]: n
     Select open_source_license:
