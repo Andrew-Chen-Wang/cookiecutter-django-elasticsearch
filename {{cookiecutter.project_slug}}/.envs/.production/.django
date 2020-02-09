@@ -56,3 +56,10 @@ REDIS_URL=redis://redis:6379/0
 CELERY_FLOWER_USER=!!!SET CELERY_FLOWER_USER!!!
 CELERY_FLOWER_PASSWORD=!!!SET CELERY_FLOWER_PASSWORD!!!
 {% endif %}
+{% if cookiecutter.elasticsearch_provider != "None" }
+# Elastic
+# ------------------------------------------------------------------------------
+ELASTICSERACH_HOST_1=
+ELASTICSEARCH_USERNAME=
+ELASTICSEARCH_PASSWORD=
+{% endif %}

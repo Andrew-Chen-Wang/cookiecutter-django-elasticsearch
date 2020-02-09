@@ -17,7 +17,12 @@ flower==0.9.3  # https://github.com/mher/flower
 {%- endif %}
 {%- endif %}
 {%- if cookiecutter.elasticsearch_provider != "None" %}
+certifi==2019.11.28  # https://github.com/certifi/python-certifi
 elasticsearch-dsl==7.1.0  # https://github.com/elastic/elasticsearch-dsl-py
+django-elasticsearch-dsl==7.1.1  # https://github.com/sabricot/django-elasticsearch-dsl
+{%- if cookiecutter.use_drf == "y" %}
+django-elasticsearch-dsl-drf==0.20.5  # https://github.com/sabricot/django-elasticsearch-dsl-drf
+{%- endif %}
 {%- endif %}
 
 # Django

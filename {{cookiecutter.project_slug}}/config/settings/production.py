@@ -150,6 +150,30 @@ class MediaRootGoogleCloudStorage(GoogleCloudStorage):
 DEFAULT_FILE_STORAGE = "config.settings.production.MediaRootGoogleCloudStorage"
 MEDIA_URL = f"https://storage.googleapis.com/{GS_BUCKET_NAME}/media/"
 {%- endif %}
+{%- if cookiecutter.elasticsearch_provider != 'None' %}
+
+# Elasticsearch
+# ------------------------------------------------------------------------------
+# https://elasticsearch-dsl.readthedocs.io/en/latest/index.html
+INSTALLED_APPS += ["django_elastic_dsl"]  # noqa F405
+{%- if cookiecutter.use_drf == 'y' %}
+INSTALLED_APPS += ["django_elasticsearch_dsl_drf"]  # noqa F405
+{%- endif %}
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': env("ELASTICSERACH_HOST_1"),
+        'http_auth': (env("ELASTICSEARCH_USERNAME"), env("ELASTICSEARCH_USERNAME"))
+        'scheme': 'https',
+        'verify_certs': True
+    }
+}
+{%- if cookiecutter.elasticsearch_provider == 'Elastic Cloud' %}
+
+{%- elif cookiecutter.elasticsearch_provider == 'Amazon Elasticsearch' %}
+
+{%- endif %}
+
+{%- endif %}
 
 # TEMPLATES
 # ------------------------------------------------------------------------------

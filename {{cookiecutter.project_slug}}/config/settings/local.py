@@ -87,5 +87,21 @@ CELERY_TASK_ALWAYS_EAGER = True
 CELERY_TASK_EAGER_PROPAGATES = True
 
 {%- endif %}
+{%- if cookiecutter.elasticsearch_provider != 'None' }
+
+# Elasticsearch
+# ------------------------------------------------------------------------------
+# https://elasticsearch-dsl.readthedocs.io/en/latest/index.html
+INSTALLED_APPS += ["django_elasticsearch_dsl"]  # noqa F405
+{%- if cookiecutter.use_drf == 'y' %}
+INSTALLED_APPS += ["django_elasticsearch_dsl_drf"]  # noqa F405
+{%- endif %}
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'localhost:9200'
+    }
+}
+
+{%- endif %}
 # Your stuff...
 # ------------------------------------------------------------------------------
