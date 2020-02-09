@@ -52,6 +52,9 @@ DJANGO_SENTRY_LOG_LEVEL                 SENTRY_LOG_LEVEL            n/a         
 MAILGUN_API_KEY                         MAILGUN_API_KEY             n/a                                            raises error
 MAILGUN_DOMAIN                          MAILGUN_SENDER_DOMAIN       n/a                                            raises error
 MAILGUN_API_URL                         n/a                         n/a                                            "https://api.mailgun.net/v3"
+ELASTICSERACH_HOST_1                    ELASTICSERACH_HOST_1        n/a                                            raises error
+ELASTICSEARCH_USERNAME                  ELASTICSEARCH_USERNAME      n/a                                            raises error
+ELASTICSEARCH_PASSWORD                  ELASTICSEARCH_PASSWORD      n/a                                            raises error
 ======================================= =========================== ============================================== ======================================================================
 
 --------------------------

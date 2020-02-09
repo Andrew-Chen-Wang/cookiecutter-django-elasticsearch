@@ -13,6 +13,8 @@ When you create a new deployment, you will be given a username and password. (Us
 
 In the dashboard (the deployment's name on the left side menu), copy the Elasticsearch endpoint and paste into the environment file.
 
+Kibana is included in the local Docker development at http://localhost:5601
+
 [1]: https://forums.aws.amazon.com/message.jspa?messageID=326076
 
 .. _here is their pricing: https://www.elastic.co/blog/elasticsearch-service-data-transfer-and-snapshot-storage-pricing
